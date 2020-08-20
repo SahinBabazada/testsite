@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>Details</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,14 +14,30 @@
 	<script type="text/javascript" src="plugins/mervick/dist/emojionearea.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg mb-4" id="nav">
+	<div class="close-page-gradient d-none" ></div>
+
+	<nav class="navbar navbar-expand-lg sticky-top mb-4" id="nav">
       <div class="container">
 		<a class="navbar-brand text-light" href="#">Logo</a>
-		<button class="navbar-toggler hamburger_button border-0" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler hamburger_button border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 		    <div class="animated-icon1 border-0"><span></span><span></span><span></span></div>
 		</button>
-        <div class="collapse navbar-collapse" id="navbarsExample07">
+        <div class="collapse navbar-collapse width" id="navbar">
           <ul class="navbar-nav mr-auto">
+          	<li class="nav-item dropdown profile-on-navbar">
+		        <a class="nav-link text-light dropdown-toggle" href="#" id="profileOnNavbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Profile
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="profileOnNavbar">
+		          <a class="dropdown-item" href="#">Watchlist</a>
+		          <a class="dropdown-item" href="#">Setting</a>
+		          <a href="#" class="dropdown-item">
+				  	Notifications <span class="badge badge-light">400</span>
+				  </a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="#">Sign out</a>
+		        </div>
+	      	</li>
             <li class="nav-item active">
               <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -31,14 +46,18 @@
             </li>
           </ul>
         <form class="navbar-form mr-1" role="search">
-	        <div class="input-group">
+	        <div class="input-group search-on-nav">
 	            <input type="text" class="form-control search-nav-bar" placeholder="Search" name="srch-term" id="srch-term">
 	            <div class="input-group-btn search_button_header">
 	                <button class="btn search_button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 	            </div>
 	        </div>
         </form>
-           <a type="button" href="#" class="nav-link btn signup_header">SIGN UP</a>
+      		<ul class="navbar-nav">
+        		<li class="nav-item">
+					<a type="button" href="#" class="nav-link btn signup_header">SIGN UP</a>            	
+				</li>
+      		</ul>
         </div>
       </div>
     </nav>
@@ -61,12 +80,13 @@
 
 	            <div class="info-header shadow rounded mb-4" >
 	               <div class="row d-flex align-items-center justify-content-between p-3">
-	                  <div class="col-lg-7 m-b-4">
+	                  <div class="col-lg-8 m-b-4">
 	                     <h3 class=" mb-0 mt-0 font-weight-bold text-light">Norsemen</h3>
 	                     <p class="mb-0"><small class="text-muted">Action / Adventure / Science Fiction / 3D</small></p>
 	                  </div>
-	                  <div class="col-lg-5 text-right">
+	                  <div class="col-lg-4 text-left">
 	                     <a href="#" class="d-sm-inline-block btn btn-danger shadow-sm"> Add to Watchlist</a>
+	                     <a href="#" class="d-sm-inline-block btn btn-danger shadow-sm"> Follow</a>
 	                  </div>
 	               </div>
 	            </div>
@@ -98,8 +118,8 @@
 	                  </li>
 	               </ul>
 	               <div class="tab-content" id="myTabContent">
-	                  <div class="tab-pane fade mt-3" id="home" role="tabpanel" aria-labelledby="home-tab">
-	                     <p class="text-gray-500">
+	                  <div class="tab-pane fade text-justify mt-3"  id="home" role="tabpanel" aria-labelledby="home-tab">
+	                     <p class="text-gray-500 ">
 	                     	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	                     	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	                     	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -125,11 +145,11 @@
 
 	                  <div class="tab-pane fade"id="profile" role="tabpanel" aria-labelledby="profile-tab">
 	                    <div class="row cast mt-4">
-	                        <div class="col-lg-3 col-md-4 col-6">
+	                        <div class="col-lg-3 col-md-4 col-12">
 	                           <div class="artist-list mb-4">
 	                              <a class="d-flex align-items-center" href="#">
 	                                 <div class="dropdown-list-image mr-3">
-	                                    <img class="rounded" src="https://th.bing.com/th/id/OIP.IRGtsbFZ8PY_ji5uMcGbNwHaEs?pid=Api&rs=1" alt="">
+	                                    <img class="rounded-circle" width="50px" src="https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1" alt="">
 	                                    <div class="status-indicator bg-success"></div>
 	                                 </div>
 	                                 <div class="font-weight-bold">
@@ -139,11 +159,25 @@
 	                              </a>
 	                           </div>
 					     	</div> 
-	                        <div class="col-lg-3 col-md-4 col-6">
+	                        <div class="col-lg-3 col-md-4 col-12">
 	                           <div class="artist-list mb-4">
 	                              <a class="d-flex align-items-center" href="#">
 	                                 <div class="dropdown-list-image mr-3">
-	                                    <img class="rounded" src="http://4.bp.blogspot.com/-AJqtzhoMCO8/Ufn0bJ60y_I/AAAAAAAACA4/JSUQvMoqH-0/s1600/Scarlett+Johansson-2.jpg" alt="">
+	                                    <img class="rounded-circle" width="50px" src="https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1" alt="">
+	                                    <div class="status-indicator bg-success"></div>
+	                                 </div>
+	                                 <div class="font-weight-bold mw-100">
+	                                    <div class="text-truncate">Carla Gugino</div>
+	                                    <div class="small text-gray-500">Acting</div>
+	                                 </div>
+	                              </a>
+	                           </div>
+					     	</div>                        
+					     	<div class="col-lg-3 col-md-4 col-12">
+	                           <div class="artist-list mb-4">
+	                              <a class="d-flex align-items-center" href="#">
+	                                 <div class="dropdown-list-image mr-3">
+	                                    <img class="rounded-circle" width="50px" src="https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1" alt="">
 	                                    <div class="status-indicator bg-success"></div>
 	                                 </div>
 	                                 <div class="font-weight-bold">
@@ -153,11 +187,11 @@
 	                              </a>
 	                           </div>
 					     	</div>                        
-					     	<div class="col-lg-3 col-md-4 col-6">
+					     	<div class="col-lg-3 col-md-4 col-12">
 	                           <div class="artist-list mb-4">
 	                              <a class="d-flex align-items-center" href="#">
 	                                 <div class="dropdown-list-image mr-3">
-	                                    <img class="rounded" src="https://pmcdeadline2.files.wordpress.com/2016/02/rexfeatures_5599371cz.jpg?w=605" alt="">
+	                                    <img class="rounded-circle" width="50px" src="https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1" alt="">
 	                                    <div class="status-indicator bg-success"></div>
 	                                 </div>
 	                                 <div class="font-weight-bold">
@@ -167,25 +201,11 @@
 	                              </a>
 	                           </div>
 					     	</div>                        
-					     	<div class="col-lg-3 col-md-4 col-6">
+					     	<div class="col-lg-3 col-md-4 col-12">
 	                           <div class="artist-list mb-4">
 	                              <a class="d-flex align-items-center" href="#">
 	                                 <div class="dropdown-list-image mr-3">
-	                                    <img class="rounded" src="https://pmcdeadline2.files.wordpress.com/2016/02/rexfeatures_5599371cz.jpg?w=605" alt="">
-	                                    <div class="status-indicator bg-success"></div>
-	                                 </div>
-	                                 <div class="font-weight-bold">
-	                                    <div class="text-truncate">Carla Gugino</div>
-	                                    <div class="small text-gray-500">Acting</div>
-	                                 </div>
-	                              </a>
-	                           </div>
-					     	</div>                        
-					     	<div class="col-lg-3 col-md-4 col-6">
-	                           <div class="artist-list mb-4">
-	                              <a class="d-flex align-items-center" href="#">
-	                                 <div class="dropdown-list-image mr-3">
-	                                    <img class="rounded" src="https://pmcdeadline2.files.wordpress.com/2016/02/rexfeatures_5599371cz.jpg?w=605" alt="">
+	                                    <img class="rounded-circle" width="50px" src="https://th.bing.com/th/id/OIP.FAq6HY6_62GWDhj9RGhgwAHaHa?pid=Api&rs=1" alt="">
 	                                    <div class="status-indicator bg-success"></div>
 	                                 </div>
 	                                 <div class="font-weight-bold">
@@ -447,7 +467,7 @@
 							<a href="privacy.html">Privacy Policy</a>
 						</nav>
 
-						<a href="#nav" class="footer__back">
+						<a class="footer__back">
 							<i class="fa fa-arrow-up" aria-hidden="true"></i>
 						</a>
 					</div>
@@ -466,12 +486,30 @@
  
 
 	<script type="text/javascript">
+		//hamburger menu
 		$(document).ready(function () {
-		    $('.hamburger_button').on('click', function () {
-		        $('.animated-icon1').toggleClass('open');
-		        $('.linetwo').toggleClass('disabble')
+		    $('.hamburger_button').on('click', function () {     
+				if (!$('#navbar').hasClass("show")) {
+					$('.animated-icon1').addClass('open');
+					$('.linetwo').addClass('disabble');
+					$('body').css("overflow", "hidden");
+					$('.close-page-gradient').removeClass("d-none");
+						$('.close-page-gradient').click(function(){
+							$('.close-page-gradient').addClass("d-none");
+							$('.animated-icon1').removeClass('open');
+							$('.linetwo').removeClass('disabble');
+							$('body').css("overflow", "auto");
+							$('#navbar').removeClass("show");
+						});
+				}else{
+					$('.close-page-gradient').addClass("d-none");
+					$('.animated-icon1').removeClass('open');
+					$('.linetwo').removeClass('disabble');
+					$('body').css("overflow", "auto");
+				}
 		    });
 		});
+
 
         // $('.send-review-textarea').on('input', function () { 
         //     this.style.height = 'auto'; 
@@ -486,6 +524,12 @@
 	      tones: false
 	    });
 	  });
+
+	  $(document).ready(function(){
+ 			$('.footer__back').click(function(){
+ 				window.scrollTo(0, 0);
+ 			})
+ 		})
 	</script>
 </body>
 </html>
