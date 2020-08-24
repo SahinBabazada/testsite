@@ -33,8 +33,8 @@
 		          Profile
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="profileOnNavbar">
-		          <a class="dropdown-item" href="#">Watchlist</a>
-		          <a class="dropdown-item" href="#">Setting</a>
+		          <a class="dropdown-item" href="profile.html">Watchlist</a>
+		          <a class="dropdown-item" href="profile.html">Setting</a>
 		          <a href="#" class="dropdown-item">
 				  	Notifications <span class="badge badge-light">400</span>
 				  </a>
@@ -46,7 +46,7 @@
               <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">People</a>
+              <a class="nav-link text-light" href="people.html">People</a>
             </li>
           </ul>
         <form class="navbar-form mr-1" role="search">
@@ -59,7 +59,7 @@
         </form>
       		<ul class="navbar-nav">
         		<li class="nav-item">
-					<a type="button" href="#" class="nav-link btn signup_header">SIGN UP</a>            	
+					<a type="button" href="signup.html" class="nav-link btn signup_header">SIGN UP</a>            	
 				</li>
       		</ul>
         </div>
@@ -444,7 +444,7 @@
 		            <div class="card card-list">
 		              <div class="card__cover">
 		                <img src="http://static3.businessinsider.com/image/511cffe5eab8ea1355000012-948-1445/new%20harry%20potter%20cover.jpg" alt="">
-		                <a href="#" class="card__play">
+		                <a href="filmsablon.html" class="card__play">
 		                  <i class="fa fa-play" aria-hidden="true"></i>
 		                </a>
 		                <a class="details" href="moviedetail.html">details</a>
@@ -452,7 +452,7 @@
 		                <span class="card__year">2020</span>
 		              </div>
 		              <div class="card__content">
-		                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+		                <h3 class="card__title"><a href="filmsablon.html">I Dream in Another Language</a></h3>
 		                <span class="card__category">
 		                    <a href="#">Action</a>
 		                    <a href="#">Triler</a>
@@ -970,7 +970,7 @@
 							<a href="privacy.html">Privacy Policy</a>
 						</nav>
 
-						<a class="footer__back">
+						<a class="footer__back" href="#top">
 							<i class="fa fa-arrow-up" aria-hidden="true"></i>
 						</a>
 					</div>
@@ -986,104 +986,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
- 
-
-	<script type="text/javascript">
-		//hamburger menu
-		$(document).ready(function () {
-		    $('.hamburger_button').on('click', function () {     
-				if (!$('#navbar').hasClass("show")) {
-					$('.animated-icon1').addClass('open');
-					$('.linetwo').addClass('disabble');
-					$('body').css("overflow", "hidden");
-					$('.close-page-gradient').removeClass("d-none");
-						$('.close-page-gradient').click(function(){
-							$('.close-page-gradient').addClass("d-none");
-							$('.animated-icon1').removeClass('open');
-							$('.linetwo').removeClass('disabble');
-							$('body').css("overflow", "auto");
-							$('#navbar').removeClass("show");
-						});
-				}else{
-					$('.close-page-gradient').addClass("d-none");
-					$('.animated-icon1').removeClass('open');
-					$('.linetwo').removeClass('disabble');
-					$('body').css("overflow", "auto");
-				}
-		    });
-		});
-
-		//story settings
-		$(document).ready(function(){
-	 	 	$('.story').slick({
-			  	slidesToShow: 5,
-			  	arrows:true,  
-  				infinite: false,
-			  	centerMode: false,
-			  	responsive: [
-			    	{
-			      		breakpoint: 768,
-			      		settings: {
-			      			slidesToShow: 4,
-			        		arrows: false,
-			        		centerMode: false,
-			      		}
-		    		},
- 
-			  	]
-		  	});
-		});
-
-		// story vide src
-		$(document).ready(function() {
-			var $videoSrc;  
-			$('.storyButton').click(function() {
-				$this = $(this);
-			    $videoSrc = $(this).data( "src" );
-    			$('#storyModal').on('shown.bs.modal', function (e) { 
-					$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" );
-					$this.parents('.circle').addClass('circle-clicked');	 
-				});
-				$('#storyModal').on('hide.bs.modal', function (e) {
-				    $("#video").attr('src',$videoSrc); 
-				    $this.parents('.circle').removeClass('circle-clicked');
-				    $this.parents('.circle').addClass('story-viewed');
-				});
-			});
-		});
-
-		//  rotate icon
-		$(document).ready(function() {
-			$(".rotate").click(function(){
-				$this = $(this);
-				let url = $this.data("target");
-				if (!($(url).hasClass("show"))) {
- 					$(this).removeClass("down");
-				}else{
-					$(this).addClass("down");
-				}
-			});
-		});
-
-
- 		$(document).ready(function(){
- 			$('.footer__back').click(function(){
- 				window.scrollTo(0, 0);
- 			})
- 		})
-
-		$(document).ready(function(){
- 			$('#loadMore').click(function(){
- 				$this = $(this);
- 				$(this).addClass('d-none');
- 				$('.spinner-border').removeClass('d-none');
- 				setInterval(function () {
-			        $('.spinner-border').addClass('d-none');
-			        $this.removeClass('d-none');
-			    },3000);
- 			})
- 		})		 
- 
-	</script>
+ 	<script type="text/javascript" src="dist/js/index.js"></script>
 </body>
 </html>
