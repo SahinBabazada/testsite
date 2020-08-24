@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
+  	<link rel="stylesheet" type="text/css" href="plugins/mervick/dist/emojionearea.css" media="screen">
+  	<link rel="stylesheet" type="text/css" href="plugins/mervick/tomorrow.css" media="screen">  
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="plugins/mervick/prettify.js"></script>
+	<script type="text/javascript" src="plugins/mervick/dist/emojionearea.js"></script>
+</head>
+<body>
+	<div class="page-content d-flex justify-content-center mt-5 ">
+		<div class="sign-content mt-4">
+			<div class="container">
+				<div class="row register-part">
+					<div class="form-left col-12 col-xl-6 col-md-6">
+						<h2>INFOMATION</h2>
+						<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
+						<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
+						<div class="form-left-last">
+							<button class="account" id="have-acc">Have An Account</button>
+						</div>
+					</div>
+					<form class="form-detail col-12 col-xl-6 col-md-6" action="#" method="post" id="myform">
+						<h2>REGISTER FORM</h2>
+						<div class="form-group">
+							<div class="form-row form-row-1">
+								<label for="first_name">First Name</label>
+								<input type="text" name="first_name" id="first_name" class="input-text">
+							</div>
+							<div class="form-row form-row-1">
+								<label for="last_name">Last Name</label>
+								<input type="text" name="last_name" id="last_name" class="input-text">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="user_name">User Name</label>
+							<input type="text" name="user_name" id="user_name" class="input-text">
+						</div>
+						<div class="form-row">
+							<label for="your_email">Your Email</label>
+							<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+						</div>
+						<div class="form-group">
+							<div class="form-row form-row-1 ">
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password" class="input-text" required>
+							</div>
+							<div class="form-row form-row-1">
+								<label for="comfirm-password">Comfirm Password</label>
+								<input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
+							</div>
+						</div>
+						<div class="form-checkbox ">
+							<div class="form-row">
+								<input type="checkbox" id="terms" />
+								<label for="terms"><p>I agree to the <a href="#" class="text">Terms and Conditions</a></p> </label>
+							</div>	  
+						</div>
+						<div class="form-row-last">
+							<input type="submit" name="register" class="register p-2" value="Register">
+						</div>
+					</form>
+				</div>
+				<div class="row login-part d-none">
+					<div class="form-left col-12 col-xl-6 col-md-6">
+						<h2>INFOMATION</h2>
+						<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
+						<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
+						<div class="form-left-last">
+							<button class="account" id="crt-acc">Create An Account</button>
+						</div>
+					</div>
+					<form class="form-detail col-12 col-xl-6 col-md-6" action="#" method="post" id="myform">
+						<h2>Login Form</h2>
+						<div class="form-row">
+							<label for="your_email-login">Your Email</label>
+							<input type="text" name="your_email-login" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+						</div>
+						<div class="form-row">
+								<label for="password-login">Password</label>
+								<input type="password" name="password-login" id="password" class="input-text" required>
+						</div>
+						<div class="form-row-last">
+							<input type="submit" name="Login" class="register p-2" value="Login">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+ 	<script type="text/javascript" src="dist/js/index.js"></script>
+ 
+</body>
+</html>
